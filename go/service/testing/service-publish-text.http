@@ -1,0 +1,3 @@
+curl -d "ping" \
+     -H "Content-type: text/plain;charset=UTF-8" \
+     "http://localhost:3500/v1.0/invoke/serving/method/echo"

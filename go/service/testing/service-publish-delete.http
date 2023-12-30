@@ -1,0 +1,2 @@
+curl -X DELETE \
+    "http://localhost:3500/v1.0/invoke/serving/method/echo?k1=v1&k2=v2"

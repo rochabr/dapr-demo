@@ -1,0 +1,3 @@
+curl -d '{ "from": "John", "to": "Lary", "message": "hi" }' \
+     -H "Content-type: application/json" \
+     "http://localhost:3500/v1.0/invoke/serving/method/echo"

@@ -1,1 +1,1 @@
-# dapr-demo
+# Dapr demo on Go

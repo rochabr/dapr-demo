@@ -44,17 +44,17 @@ var importantSubscription = &common.Subscription{
 }
 
 func main() {
-	s := daprd.NewService(":8080")
+	service := daprd.NewService(":8080")
 
-	if err := s.AddTopicEventHandler(defaultSubscription, eventHandler); err != nil {
+	if err := service.AddTopicEventHandler(defaultSubscription, eventHandler); err != nil {
 		log.Fatalf("error adding topic subscription: %v", err)
 	}
 
-	if err := s.AddTopicEventHandler(importantSubscription, importantEventHandler); err != nil {
+	if err := service.AddTopicEventHandler(importantSubscription, importantEventHandler); err != nil {
 		log.Fatalf("error adding topic subscription: %v", err)
 	}
 
-	if err := s.Start(); err != nil && err != http.ErrServerClosed {
+	if err := service.Start(); err != nil && err != http.ErrServerClosed {
 		log.Fatalf("error listenning: %v", err)
 	}
 }
